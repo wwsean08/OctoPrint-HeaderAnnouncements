@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_HeaderAnnouncements/templates *
+recursive-include octoprint_HeaderAnnouncements/translations *
+recursive-include octoprint_HeaderAnnouncements/static *
