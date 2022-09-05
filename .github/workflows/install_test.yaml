@@ -1,0 +1,32 @@
+name: Install Test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  install_matrix:
+    name: Install Matrix Test
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        OctoPrintVersion:
+          - 1.4.0
+          - 1.5.0
+          - 1.6.0
+          - 1.7.0
+          - 1.8.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Test Install
+        run: |
+          pip install OctoPrint==${{ matrix.OctoPrintVersion }}
+          pip install -e .
