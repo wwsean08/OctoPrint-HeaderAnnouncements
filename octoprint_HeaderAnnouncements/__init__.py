@@ -50,7 +50,8 @@ class HeaderAnnouncementsPlugin(octoprint.plugin.SettingsPlugin,
     # TemplatePlugin mixin
     def get_template_configs(self):
         return [
-            dict(type="settings", custom_bindings=False)
+            dict(type="settings", custom_bindings=False),
+            dict(type="generic")
         ]
 
     # Softwareupdate hook
