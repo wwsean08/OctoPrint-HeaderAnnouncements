@@ -59,6 +59,7 @@ additional_setup_parameters = {"python_requires": ">=3,<4"}
 ########################################################################################################################
 
 from setuptools import setup
+from pathlib import Path
 
 try:
     import octoprint_setuptools
@@ -92,4 +93,10 @@ if len(additional_setup_parameters):
 
     setup_parameters = dict_merge(setup_parameters, additional_setup_parameters)
 
-setup(**setup_parameters)
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
+setup(**setup_parameters,
+      long_description=long_description,
+      long_description_content_type='text/markdown'
+      )
