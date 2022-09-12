@@ -1,6 +1,5 @@
 # OctoPrint-HeaderAnnouncements
-
-**TODO:** Describe what your plugin does.
+In a shared environment like a maker space or lab, it can be useful to be able to notify users of upcoming changes, maintenance, procedures, etc.  This plugin allows you to set a header that will be displayed at the top of the page for users to see.
 
 ## Setup
 
@@ -9,9 +8,6 @@ or manually using this URL:
 
     https://github.com/wwsean08/OctoPrint-HeaderAnnouncements/archive/master.zip
 
-**TODO:** Describe how to install your plugin, if more needs to be done than just installing it via pip or through
-the plugin manager.
-
 ## Configuration
 
-**TODO:** Describe your plugin's configuration options (if any).
+* Announcement: The announcement to display.  If you update this after someone has loaded the page, they will receive the new announcement within 1 minute replacing the existing one.
