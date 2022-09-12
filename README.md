@@ -6,7 +6,7 @@ In a shared environment like a maker space or lab, it can be useful to be able t
 Install via the bundled [Plugin Manager](https://docs.octoprint.org/en/master/bundledplugins/pluginmanager.html)
 or manually using this URL:
 
-    https://github.com/wwsean08/OctoPrint-HeaderAnnouncements/archive/master.zip
+    https://github.com/wwsean08/OctoPrint-HeaderAnnouncements/archive/main.zip
 
 ## Configuration
 
