@@ -6,15 +6,9 @@
  */
 $(function () {
     function HeaderannouncementsViewModel(parameters) {
-        let self = this;
         let announcement = document.getElementById('header_announcement')
         let navbar = document.getElementById('navbar')
         navbar.after(announcement)
-        // self.settingsViewModel = parameters[0];
-        // const msg = self.settingsViewModel.settings.plugins['HeaderAnnouncements'].announcementText
-        // console.log(msg)
-
-        // TODO: Implement your plugin's view model here.
     }
 
     /* view model class, parameters for constructor, container to bind to
@@ -24,7 +18,7 @@ $(function () {
     OCTOPRINT_VIEWMODELS.push({
         construct: HeaderannouncementsViewModel,
         // ViewModels your plugin depends on, e.g. loginStateViewModel, settingsViewModel, ...
-        dependencies: ["settingsViewModel"],
+        dependencies: [],
         // Elements to bind to, e.g. #settings_plugin_HeaderAnnouncements, #tab_plugin_HeaderAnnouncements, ...
         elements: [ /* ... */]
     });
