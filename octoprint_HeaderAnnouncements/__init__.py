@@ -18,9 +18,7 @@ import octoprint.plugin
 
 class HeaderAnnouncementsPlugin(octoprint.plugin.SettingsPlugin,
                                 octoprint.plugin.AssetPlugin,
-                                octoprint.plugin.TemplatePlugin,
-                                octoprint.plugin.SimpleApiPlugin
-                                ):
+                                octoprint.plugin.TemplatePlugin):
 
     # SettingsPlugin mixin
 
@@ -28,6 +26,11 @@ class HeaderAnnouncementsPlugin(octoprint.plugin.SettingsPlugin,
         return {
             SettingsKeys.SETTING_ANNOUNCEMENT: ""
         }
+
+    def on_settings_save(self, data):
+        octoprint.plugin.SettingsPlugin.on_settings_save(self, data)
+        self._plugin_manager.send_plugin_message(self._identifier, {
+            SettingsKeys.SETTING_ANNOUNCEMENT: self._settings.get([SettingsKeys.SETTING_ANNOUNCEMENT])})
 
     # AssetPlugin mixin
 
@@ -40,12 +43,6 @@ class HeaderAnnouncementsPlugin(octoprint.plugin.SettingsPlugin,
             "less": ["less/HeaderAnnouncements.less"]
         }
 
-    # SimpleApiPlugin mixin
-
-    # on_api_get allows the front end to retrieve the current announcement
-    def on_api_get(self, request):
-        return flask.jsonify({"msg": flask.escape(self._settings.get([SettingsKeys.SETTING_ANNOUNCEMENT]))})
-
     # TemplatePlugin mixin
     def get_template_configs(self):
         return [
@@ -53,7 +50,7 @@ class HeaderAnnouncementsPlugin(octoprint.plugin.SettingsPlugin,
             dict(type="generic")
         ]
 
-    # Softwareupdate hook
+        # Softwareupdate hook
 
     def get_update_information(self):
         # Define the configuration for your plugin to use with the Software Update
