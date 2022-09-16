@@ -26,8 +26,7 @@ class HeaderAnnouncementsPlugin(octoprint.plugin.SettingsPlugin,
 
     def get_settings_defaults(self):
         return {
-            SettingsKeys.SETTING_ANNOUNCEMENT: "",
-            "custom_bindings": False
+            SettingsKeys.SETTING_ANNOUNCEMENT: ""
         }
 
     # AssetPlugin mixin
