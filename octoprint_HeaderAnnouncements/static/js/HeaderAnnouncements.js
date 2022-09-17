@@ -16,7 +16,7 @@ $(function () {
         self.settings.onStartupComplete = function () {
             const text = self.settings.settings.plugins.HeaderAnnouncements.announcementText()
             if (text !== "") {
-                announcement_msg.textContent = text
+                announcement_msg.innerHTML = text
                 announcement.style.display = "flex"
             }
         }
@@ -27,7 +27,7 @@ $(function () {
             }
             console.log(data)
             const text = data.announcementText
-            announcement_msg.textContent = text
+            announcement_msg.innerHTML = text
             if (text !== "") {
                 announcement.style.display = "flex"
             } else {
