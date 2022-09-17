@@ -1,7 +1,7 @@
 # coding=utf-8
 from __future__ import absolute_import
 
-import flask
+import bleach
 
 from octoprint_HeaderAnnouncements.common.SettingsKeys import SettingsKeys
 
@@ -28,6 +28,8 @@ class HeaderAnnouncementsPlugin(octoprint.plugin.SettingsPlugin,
         }
 
     def on_settings_save(self, data):
+        data['announcementText'] = bleach.clean(data['announcementText'])
+        data['announcementText'] = bleach.linkify(data['announcementText'])
         octoprint.plugin.SettingsPlugin.on_settings_save(self, data)
         self._plugin_manager.send_plugin_message(self._identifier, {
             SettingsKeys.SETTING_ANNOUNCEMENT: self._settings.get([SettingsKeys.SETTING_ANNOUNCEMENT])})
