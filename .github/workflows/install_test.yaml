@@ -32,7 +32,7 @@ jobs:
           pip install OctoPrint==${{ matrix.OctoPrintVersion }}
           pip install -e .
           octoprint serve --iknowwhatimdoing -c tests/fixtures/config.yaml &
-          sleep 10000
+          sleep 10
 
       - name: Run cypress
         uses: cypress-io/github-action@v4
