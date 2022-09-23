@@ -39,3 +39,4 @@ jobs:
         with:
           browser: chrome
           spec: tests/cypress/e2e/octoprint/headerAnnouncements.cy.js
+          working-directory: tests
