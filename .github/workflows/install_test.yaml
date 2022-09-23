@@ -38,5 +38,5 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
-          spec: tests/cypress/e2e/octoprint/headerAnnouncements.cy.js
+          spec: cypress/e2e/octoprint/headerAnnouncements.cy.js
           working-directory: tests
