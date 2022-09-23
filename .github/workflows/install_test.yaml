@@ -31,3 +31,11 @@ jobs:
         run: |
           pip install OctoPrint==${{ matrix.OctoPrintVersion }}
           pip install -e .
+          octoprint serve --iknowwhatimdoing -c test/fixtures/config.yaml &
+          sleep 10000
+
+      - name: Run cypress
+        uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
+          spec: tests/cypress/e2e/octoprint/headerAnnouncements.cy.js

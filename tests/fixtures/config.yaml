@@ -1,0 +1,58 @@
+accessControl:
+  salt: 62zOsyouGt4wychrOMXDjNIpeLaXipft
+  userFile: /home/runner/work/wwsean08/OctoPrint-HeaderAccouncements/test/fixtures/users.yaml
+api:
+  key: 5A140FC49F1F4DD0B502979BABB4341D
+plugins:
+  HeaderAnnouncements:
+    announcementText: <a href="https://google.com" rel="nofollow">this is a link to
+      google</a>
+  announcements:
+    _config_version: 1
+    channels:
+      _blog:
+        read_until: 1661175900
+      _important:
+        read_until: 1521111600
+      _octopi:
+        read_until: 1659616200
+      _plugins:
+        read_until: 1662958800
+      _releases:
+        read_until: 1663673400
+  discovery:
+    upnpUuid: 5c7830cd-764c-49a5-bcd3-b4af7302500d
+  errortracking:
+    unique_id: 5955683e-2d9b-4cea-8ce4-a2f4bcd1b341
+  gcodeviewer:
+    _config_version: 1
+  softwareupdate:
+    _config_version: 9
+  tracking:
+    enabled: false
+    unique_id: dd7819f8-d73f-402c-8b8f-7e919d907e7d
+  virtual_printer:
+    _config_version: 1
+printerProfiles:
+  default: _default
+server:
+  firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: true
+  secretKey: dGsNRyRu0TCqlUFlCEr9nXCgOdBfn7Rm
+  seenWizards:
+    backup: null
+    corewizard: 4
+    tracking: null
+temperature:
+  profiles:
+  - bed: 100
+    chamber: null
+    extruder: 210
+    name: ABS
+  - bed: 60
+    chamber: null
+    extruder: 180
+    name: PLA
