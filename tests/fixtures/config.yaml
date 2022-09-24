@@ -1,6 +1,6 @@
 accessControl:
   salt: 62zOsyouGt4wychrOMXDjNIpeLaXipft
-  userFile: /home/runner/work/wwsean08/OctoPrint-HeaderAccouncements/test/fixtures/users.yaml
+  userFile: /home/runner/work/OctoPrint-HeaderAnnouncements/OctoPrint-HeaderAnnouncements/test/fixtures/users.yaml
 api:
   key: 5A140FC49F1F4DD0B502979BABB4341D
 plugins:
