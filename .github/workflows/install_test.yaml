@@ -37,6 +37,7 @@ jobs:
       - name: Run cypress
         uses: cypress-io/github-action@v4
         with:
+          record: true
           browser: chrome
           spec: cypress/e2e/octoprint/headerAnnouncements.cy.js
           working-directory: tests
