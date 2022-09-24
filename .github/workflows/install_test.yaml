@@ -31,7 +31,6 @@ jobs:
           pip install OctoPrint==${{ matrix.OctoPrintVersion }}
           pip install -e .
           octoprint serve --iknowwhatimdoing -c tests/fixtures/config.yaml &
-          sleep 10
 
       - name: Run cypress (experimental)
         continue-on-error: true
