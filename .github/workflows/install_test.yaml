@@ -40,3 +40,6 @@ jobs:
           browser: chrome
           spec: cypress/e2e/octoprint/headerAnnouncements.cy.js
           working-directory: tests
+          wait-on: "http://localhost:5000/login/"
+          wait-on-timeout: 30
+          config: defaultCommandTimeout=10000,requestTimeout=10000
