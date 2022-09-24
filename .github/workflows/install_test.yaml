@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         OctoPrintVersion:
-          - 1.4.0
           - 1.5.0
           - 1.6.0
           - 1.7.0
@@ -34,7 +33,8 @@ jobs:
           octoprint serve --iknowwhatimdoing -c tests/fixtures/config.yaml &
           sleep 10
 
-      - name: Run cypress
+      - name: Run cypress (experimental)
+        continue-on-error: true
         uses: cypress-io/github-action@v4
         with:
           record: true
